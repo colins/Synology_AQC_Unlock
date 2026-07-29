@@ -16,7 +16,7 @@
     "os_min_ver": "7.0-40000",
     "os_max_ver": "9.9-99999",
     "arch": "avoton broadwell broadwellnk broadwellnkv2 broadwellntbap bromolow denverton epyc7002 epyc7003 grantley icelaked purley r1000 r1000nk v1000 v1000nk",
-    "exclude_model": "synology_v1000nk_ds925+"
+    "exclude_model": "synology_v1000nk_ds925+",
     "displayname": "AQC Unlock",
     "dsmappname": "SYNO.SDS._ThirdParty.App.AQC_Unlock",
     "dsmuidir": "ui",
