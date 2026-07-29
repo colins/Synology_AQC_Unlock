@@ -1,3 +1,6 @@
+v1.0.7
+- Excluded DS925+ because it does not have a PCIe slot.
+
 v1.0.6
 - Now shows warning after starting if permissions aren't set.
 - Open button now shows steps to set permissions if they aren't set.
