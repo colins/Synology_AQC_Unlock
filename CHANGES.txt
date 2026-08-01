@@ -1,3 +1,7 @@
+v1.0.8
+- Bug fix for v1.0.7 not excluding DS925+ (because it does not have a PCIe slot).
+- Bug fix for v1.0.7 being set as beta.
+
 v1.0.7
 - Excluded DS925+ because it does not have a PCIe slot.
 
