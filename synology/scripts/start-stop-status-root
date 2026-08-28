@@ -19,6 +19,9 @@ SYNOINFO="/etc/synoinfo.conf"
 # Self-contained modinfo access via the multi-call kmod binary
 MODINFO_LINK="${VAR_DIR}/modinfo"
 
+mkdir -p "$VAR_DIR" 2>/dev/null || true
+echo "" >> "$VAR_DIR/install.log"
+
 log_message() {
     echo "[$(date '+%Y-%m-%d %H:%M:%S')] $1" >> "$LOG_FILE" 2>/dev/null || true
     # The package's own var/ directory is deleted on uninstall, so also mirror
@@ -28,13 +31,11 @@ log_message() {
 }
 
 log_identity() {
-    mkdir -p "$VAR_DIR" 2>/dev/null || true
     id_output=$(id 2>&1 || true)
     log_message "Invoked as: ${id_output}"
 }
 
 ensure_modinfo() {
-    mkdir -p "$VAR_DIR" 2>/dev/null || true
     if [ ! -e "$MODINFO_LINK" ]; then
         ln -sf /bin/kmod "$MODINFO_LINK" 2>/dev/null || true
     fi
